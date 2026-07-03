@@ -1,0 +1,163 @@
+import React from 'react';
+import {
+  FaCalculator,
+  FaBone,
+  FaRulerCombined,
+  FaCogs,
+  FaUniversity,
+  FaFeatherAlt,
+  FaTh,
+  FaIndustry,
+  FaBolt,
+  FaKey,
+  FaInfinity,
+  FaMicrochip,
+  FaMemory,
+  FaLayerGroup,
+  FaDesktop,
+  FaApple,
+  FaRobot,
+  FaCloud,
+  FaChartBar,
+  FaAtom,
+  FaCode,
+  FaTerminal,
+  FaDatabase,
+  FaWindows,
+  FaLinux,
+  FaAndroid,
+  FaMobileAlt,
+  FaNetworkWired,
+  FaWifi,
+  FaGlobe,
+  FaSatelliteDish,
+  FaLink,
+  FaCubes,
+  FaBrain,
+  FaShieldAlt,
+  FaBug,
+  FaEnvelope,
+  FaLaptopCode,
+  FaRocket,
+  FaBook,
+  FaQuoteRight,
+  FaLightbulb,
+  FaHistory,
+  FaGraduationCap,
+  FaUsers,
+  FaChessKnight,
+  FaMapMarkerAlt,
+  FaFlask,
+  FaSave
+} from 'react-icons/fa';
+import { GiCircuitry, GiWeightScale, GiWireCoil } from 'react-icons/gi';
+import {
+  SiPython,
+  SiJavascript,
+  SiRust,
+  SiCplusplus,
+  SiC,
+  SiOpenjdk,
+  SiFortran,
+  SiLinux,
+  SiAndroid as SiAndroidBrand,
+  SiApple,
+  SiIos
+} from 'react-icons/si';
+
+const MAP = {
+  // introdução
+  definicao: FaBook,
+  objetivo: FaChessKnight,
+  importancia: FaUsers,
+  // instrumentos antigos
+  abaco: FaCalculator,
+  napier: FaBone,
+  regua: FaRulerCombined,
+  pascalina: GiWeightScale,
+  leibniz: GiWireCoil,
+  // babbage / ada
+  babbage: FaCogs,
+  adaLovelace: FaFeatherAlt,
+  algoritmo: FaCode,
+  // cartões perfurados
+  jacquard: FaTh,
+  hollerith: FaIndustry,
+  ibm: FaUniversity,
+  // eletromecânicos
+  zuse: GiCircuitry,
+  harvard: FaCogs,
+  guerra: FaShieldAlt,
+  // turing
+  turingMachine: FaInfinity,
+  criptoanalise: FaKey,
+  turingTest: FaRobot,
+  // eniac
+  eniac: FaBolt,
+  aplicacoes: FaRocket,
+  // gerações
+  valvula: FaLightbulb,
+  transistor: FaMicrochip,
+  circuito: FaLayerGroup,
+  microprocessador: FaDesktop,
+  apple: FaApple,
+  ia: FaBrain,
+  nuvem: FaCloud,
+  bigData: FaChartBar,
+  quantico: FaAtom,
+  robotica: FaRobot,
+  memoria: FaMemory,
+  // linguagens
+  maquina: FaMicrochip,
+  assembly: FaTerminal,
+  fortran: SiFortran,
+  cobol: FaUniversity,
+  cLang: SiC,
+  cpp: SiCplusplus,
+  java: SiOpenjdk,
+  python: SiPython,
+  javascript: SiJavascript,
+  rust: SiRust,
+  codigo: FaCode,
+  dados: FaDatabase,
+  // sistemas operacionais
+  unix: FaTerminal,
+  msdos: FaSave,
+  windows: FaWindows,
+  linux: FaLinux,
+  linuxBrand: SiLinux,
+  android: FaAndroid,
+  androidBrand: SiAndroidBrand,
+  appleBrand: SiApple,
+  iosBrand: SiIos,
+  mobile: FaMobileAlt,
+  // internet
+  rede: FaNetworkWired,
+  wifi: FaWifi,
+  globo: FaGlobe,
+  satelite: FaSatelliteDish,
+  link: FaLink,
+  // atual / futuro
+  blocos: FaCubes,
+  cerebro: FaBrain,
+  robo: FaRobot,
+  seguranca: FaShieldAlt,
+  laboratorio: FaFlask,
+  // curiosidades
+  bug: FaBug,
+  email: FaEnvelope,
+  virus: FaShieldAlt,
+  website: FaLaptopCode,
+  smartphone: FaMobileAlt,
+  // diversos
+  livro: FaBook,
+  citacao: FaQuoteRight,
+  historia: FaHistory,
+  academico: FaGraduationCap,
+  local: FaMapMarkerAlt
+};
+
+export default function Icon({ name, size = 28, color = 'currentColor', style }) {
+  const Cmp = MAP[name] || FaCogs;
+  return <Cmp size={size} color={color} style={style} />;
+}
